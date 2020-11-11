@@ -10,7 +10,7 @@ int main(){
     fin >> zahl2;
     sum = zahl1 + zahl2;
     fout << sum << std::endl;
-    std::cout << sum << std::endl;
+    //std::cout << sum << std::endl;
   }
   fin.close();
   fout.close();
