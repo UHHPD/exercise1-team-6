@@ -8,19 +8,16 @@ int main(){
   std::ofstream fout("mittelwerte.txt");
   std::ofstream fout2("varianzen.txt");
 
-  float summean;
-  float sumvar;
-
   for (int j = 0; j < 26; ++j){
-    float sum = 0;
+    double sum = 0;
     for (int i = j * 9; i < (j + 1) * 9; ++i){
       int zahl;
       fin >> zahl;
       sum = sum + zahl;
     }
-  float mean = sum / 9;
-   summean = summean + mean;
-  float var=0;
+  double mean = sum / 9;
+  
+  double var=0;
   for (int i = j * 9; i < (j + 1) * 9; ++i){
       int zahl;
       fin2 >> zahl;
@@ -39,11 +36,11 @@ int main(){
   std::ifstream fin4("mittelwerte.txt"); 
   std::ifstream fin3("varianzen.txt");
  
-  float sum = 0;
-  float sumv = 0;
+  double sum = 0;
+  double sumv = 0;
   for (int i = 0; i < 26; ++i){
-    float zahl2;
-    float zahl3;
+    double zahl2;
+    double zahl3;
 
     fin4 >> zahl2;
     fin3 >> zahl3;
@@ -51,8 +48,8 @@ int main(){
     sum = sum + zahl2;  
     sumv = sumv + zahl3;
   }
-  float mean = sum / 26.0;
-  float meanv = sumv / 26.0;
+  double mean = sum / 26.0;
+  double meanv = sumv / 26.0;
   
   std::cout << "mean mean   " << mean << std::endl;
   std::cout << "mean var   " << meanv << std::endl;
